@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="സൗജന്യമായി മദ്‌റസ പോസ്റ്ററുകൾ നിർമ്മിക്കൂ. മിനിറ്റുകൾക്കുള്ളിൽ പേരും ഫോട്ടോയും ചേർത്ത് പോസ്റ്റർ തയ്യാറാക്കാം.">
+    <meta name="keywords" content="Madrasa, Poster Maker, Kerala, Malayalam, Poster Generator, Online Editor">
+
+<title>Poster Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"/>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="poster.png" class="posterPreview">
+
+
+
+<h3>Create Personalised Poster</h3>
+
+
+<input type="text" id="name" maxlength="20" placeholder="Enter Name">
+
+<button class="btn" onclick="openCrop()">CREATE</button>
+
+</div>
+
+
+<!-- Crop Modal -->
+
+<div class="modal" id="cropModal">
+
+<div class="modalContent">
+
+<div class="cropHeader">
+
+<span>Select and Crop the image</span>
+
+</div>
+
+<input type="file" id="fileInput">
+
+<img id="cropImage">
+
+
+<div class="modalBtns">
+
+<button onclick="closeCrop()">Cancel</button>
+
+<button id="cropBtn" onclick="generatePoster()" disabled>Crop</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="result" id="resultPage">
+
+<img id="resultPoster">
+
+<button onclick="downloadPoster()" class="btn">Download Poster</button>
+
+<button onclick="shareWhatsApp()" class="shareWhatsApp">Share to WhatsApp</button>
+
+<button onclick="location.reload()" class="btn secondary">Create Again</button>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
